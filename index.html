@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,10 +8,71 @@
     <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
     <!-- Confetti CDN -->
-    <script src="confetti.js"></script>   
+    <script src="confetti.js"></script>
+    <style>
+        #confettiWrapper{
+            display: none;
+        }
+        svg {
+            font-family: "Russo One", sans-serif;
+            width: 100%;
+            height: 100%;
+        }
+
+        svg text {
+            animation: stroke 5s infinite alternate;
+            stroke-width: 2;
+            stroke: #0C1BA0;
+            font-size: 135px;
+        }
+
+        @keyframes stroke {
+            0% {
+                fill: rgba(10, 10, 137, 0);
+                stroke: rgba(12, 27, 160, 1);
+                stroke-dashoffset: 25%;
+                stroke-dasharray: 0 50%;
+                stroke-width: 2;
+            }
+
+            70% {
+                fill: rgba(10, 10, 137, 0);
+                stroke: rgba(12, 27, 160, 1);
+            }
+
+            80% {
+                fill: rgba(10, 10, 137, 0);
+                stroke: rgba(12, 27, 160, 1);
+                stroke-width: 3;
+            }
+
+            100% {
+                fill: rgba(10, 10, 137, 1);
+                stroke: rgba(12, 27, 160, 0);
+                stroke-dashoffset: -25%;
+                stroke-dasharray: 50% 0;
+                stroke-width: 0;
+            }
+        }
+
+        .wrapper {
+            background-color: #FFFFFF
+        }
+
+        ;
+    </style>
 </head>
+
 <body>
+    <div class="wrapper" id="confettiWrapper">
+        <svg class="confetti-svg">
+            <text x="50%" y="50%" dy=".35em" text-anchor="middle">
+                Yangi Yilingiz bilan!
+            </text>
+        </svg>
+    </div>
     <div class="container" id="container">
+
         <button class="confetti-button">Fireworks</button>
         <button class="confetti-button">School Pride</button>
         <button class="confetti-button">Realistic Look</button>
@@ -20,5 +82,6 @@
     </div>
     <!-- Script -->
     <script src="script.js"></script>
-</body>   
+</body>
+
 </html>
